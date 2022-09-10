@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import logo from "../Assets/logo.png";
 import { siteContent } from "../Contents/SiteContents";
 
 function NavBar() {
+  const [active, setActive] = useState(false);
+
+  // event listner for scroll y
+  const changeNavBackground = () => {
+    if (window.scrollY >= 30) {
+      setActive(true);
+    } else {
+      setActive(false);
+    }
+  };
+  window.addEventListener("scroll", changeNavBackground);
+
   return (
     <>
-      <Nav>
+      <Nav active={active}>
         <div className="logo">
           <img src={logo} />
           <div className="app-name">{siteContent.appName}</div>
@@ -30,10 +42,13 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
+  position: fixed;
+  top: 0;
   z-index: 30;
   padding: 0.8rem;
   color: white;
+  background-color: ${(props) => (props.active ? "var(--dark)" : "")};
+  transition: background-color 500ms ease-in;
   .logo {
     display: flex;
     gap: 0.4rem;

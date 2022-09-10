@@ -17,4 +17,5 @@ body {
 :root {
   --primary : #1e90ff;
   --secondary : #545657;
+  --dark : rgba(2, 2, 2, 0.904);
 }
