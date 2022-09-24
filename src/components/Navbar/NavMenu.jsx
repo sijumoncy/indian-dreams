@@ -20,39 +20,49 @@ function NavMenu() {
                         {item.iconName === 'Home'
                             ? <HomeIcon
                                 fill={menuActive === item.iconName ? 'green' : ''}
+                                className="menu-icon"
                                 onClick={() => setMenuActive(item.iconName)}
                                 height={20} width={20} />
 
                             : item.iconName === 'Service'
                                 ? <ServiceIcon
                                     fill={menuActive === item.iconName ? 'green' : ''}
+                                    className="menu-icon"
                                     onClick={() => setMenuActive(item.iconName)}
                                     height={20} width={20} />
 
                                 : item.iconName === 'TravelPackage'
                                     ? <PackageIcon
                                         fill={menuActive === item.iconName ? 'green' : ''}
+                                        className="menu-icon"
                                         onClick={() => setMenuActive(item.iconName)}
                                         height={20} width={20} />
 
                                     : item.iconName === 'TravelLocations'
                                         ? <LocationIcon
                                             fill={menuActive === item.iconName ? 'green' : ''}
+                                            className="menu-icon"
                                             onClick={() => setMenuActive(item.iconName)}
                                             height={20} width={20} />
 
                                         : item.iconName === 'AboutInfo'
                                             ? <AboutIcon
                                                 fill={menuActive === item.iconName ? 'green' : ''}
+                                                className="menu-icon"
                                                 onClick={() => setMenuActive(item.iconName)}
                                                 height={20} width={20} />
                                             : ''
                         }
-                        <span>{item.name}</span>
+                        <span
+                            className={menuActive === item.iconName ? 'active-menu-text' : ''}
+                            onClick={() => setMenuActive(item.iconName)}
+                        >
+                            {item.name}
+                        </span>
                     </li>
                 ))}
             </ul>
-        </NavList>
+        </NavList >
     )
 }
 
@@ -75,17 +85,78 @@ const NavList = styled.div`
         flex-flow: row nowrap;
         align-items: center;
         justify-content: space-around;
+
         li {
             display: flex;
             flex-direction: column;
+            align-items: center;
             list-style: none;
+
             span {
                 display: none;
                 font-size: x-small;
                 font-weight: 600;
                 line-height: 1rem;
+
+                @media (${devices.mobileM}){
+                    display: block;
+                }
             }
         }
+
+        @media (${devices.tabletM}){
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+        }
+
+        @media (${devices.tablet}){
+            margin-top: 1.2rem;
+            li {
+                .menu-icon{
+                    display: none;
+                }
+                .active-menu-text{
+                    color: #fff;
+                    font-weight: 600;
+                }
+                span {
+                    font-size: smaller;
+                    font-weight: 400;
+                    color: #cac4c4;
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        @media (${devices.laptopL}){
+            margin-top: 2.5rem;
+            li {
+                span {
+                    font-size: large;
+                }
+            }
+        }
+        @media (${devices.desktop}){
+            li {
+                span {
+                    font-size: 1.8rem;
+                }
+            }
+        }
+
+    }
+
+    @media (${devices.tablet}){
+        position: relative;
+        top: 0;
+        right: 0;
+        width: auto;
+        height: auto;
+        background: transparent;
+        box-shadow: none;
     }
 
 `;

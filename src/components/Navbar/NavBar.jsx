@@ -53,55 +53,30 @@ const Nav = styled.nav`
       font-weight: 500;
     }
   }
+  @media (${devices.laptopL}){
+    .logo{
+      img {
+        margin: .5rem 0 0 .5rem;
+        width: 60px;
+        height: 60px;
+      }
+      .app-name {
+        font-size: larger;
+      }
+    }
+  }
+  @media (${devices.desktop}){
+    .logo{
+      img {
+        margin: .5rem 0 0 .5rem;
+        width: 80px;
+        height: 80px;
+      }
+      .app-name {
+        font-size: 1.8rem;
+      }
+    }
+  }
 `;
-
-// const Nav = styled.nav`
-//   width: 100%;
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: flex-end;
-//   position: fixed;
-//   top: 0;
-//   z-index: 30;
-//   padding: 0.8rem;
-//   color: white;
-//   background-color: ${(props) => (props.active ? "var(--dark)" : "")};
-//   transition: background-color 500ms ease-in;
-//   .logo {
-//     display: flex;
-//     gap: 0.4rem;
-//     cursor: pointer;
-//     img {
-//       height: 70px;
-//       width: 70px; 
-//       margin-top: 5px;
-//     }
-//     .app-name {
-//       display: flex;
-//       font-size: x-large;
-//       align-items: flex-end;
-//       font-weight: 700;
-//     }
-//   }
-//   .menu-items {
-//     display: flex;
-//     .mob-icon {
-//       display: none;
-//     }
-//     ul {
-//       margin-top: 5px;
-//       display: flex;
-//       gap: 1rem;
-//       font-weight: 400;
-//       font-size: x-large;
-//       transition: ease all .5s;
-//     }
-//     li {
-//       list-style-type: none;
-//       cursor: pointer;
-//     }
-//   }
-
-// `;
 
 export default NavBar;
