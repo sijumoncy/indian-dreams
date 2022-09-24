@@ -35,7 +35,10 @@ function NavBar() {
 
 // default is mobileS
 const Nav = styled.nav`
-  /* width: 100%; */
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .8));;
   display: flex;
   padding: 0.5rem;
   justify-content: space-between;

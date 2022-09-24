@@ -8,8 +8,7 @@ function Home() {
     <>
       {/* <ScrollToTop /> */}
       <NavBar />
-      {/* <Hero />
-      <Hero /> */}
+      <Hero />
     </>
   );
 }
