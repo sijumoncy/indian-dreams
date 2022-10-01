@@ -59,7 +59,7 @@ const Section = styled.section`
     width: 50%;
     position: absolute;
     top: 15%;
-    right: 1%;
+    right: 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -68,19 +68,24 @@ const Section = styled.section`
     .title {
       h1 {
         font-size: small;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
       p{
         margin-top: .3rem;
         font-size: .5rem;
+        display: flex;
+        text-align: center;
       }
     }
     @media (${devices.mobileM}) {
-      top: 17%;
+      top: 19%;
     }
     @media (${devices.mobileL}) {
-      top: 19%;
-      right: 5%;
-      width: 45%;
+      top: 21%;
+      right: 6%;
+      /* width: 45%; */
       .title{
         h1{
           font-size: medium;
@@ -91,70 +96,61 @@ const Section = styled.section`
       }
     }
     @media (${devices.tablet}) {
-      top: 23%;
-      right: 9%;
-      width: 40%;
+      top: 24%;
+      /* right: 5%; */
       .title{
         h1{
           font-size: 1.5rem;
         }
         p{
-        margin-top: .35rem;
-        font-size: .5rem;
-        font-weight: 200;
-        width: 90%;
-        text-align: center;
+        margin-top: .4rem;
+        font-size: .6rem;
+        font-weight: 100;
+        color: #585656;
       }
       }
     }
     @media (${devices.laptop}) {
       top: 27%;
-      right: 0;
-      width: 45%;
+      /* right: 5%; */
+      /* width: 45%; */
       .title{
         h1{
           font-size: 2rem;
         }
         p{
         margin-top: .5rem;
-        font-size: .5rem;
+        font-size: .6rem;
         font-weight: 200;
-        width: 75%;
-        text-align: center;
       }
       }
     }
     @media (${devices.laptopL}) {
       top: 27%;
-      right: 0;
-      width: 47%;
+      /* right: 0; */
+      /* width: 47%; */
       .title{
         h1{
           font-size: 3rem;
         }
         p{
         margin-top: .5rem;
-        font-size: .75rem;
+        font-size: .9rem;
         font-weight: 200;
-        width: 80%;
-        text-align: center;
       }
       }
     }
     @media (${devices.desktop}) {
       top: 26%;
-      right: 0;
-      width: 45%;
+      /* right: 0; */
+      /* width: 45%; */
       .title{
         h1{
           font-size: 5rem;
         }
         p{
         margin-top: .5rem;
-        font-size: 1.3rem;
-        font-weight: 200;
-        width: 80%;
-        text-align: center;
+        font-size: 1.5rem;
       }
       }
     }
@@ -233,7 +229,7 @@ const Section = styled.section`
       @media (${devices.tablet}) {
         position: absolute;
         top: 38%;
-        right: 15%;
+        right: 16%;
         .input-group {
             gap: .6rem;
             label {
@@ -253,8 +249,8 @@ const Section = styled.section`
       }
       @media (${devices.laptop}) {
         position: absolute;
-        top: 42%;
-        right: 16%;
+        top: 40%;
+        right: 23%;
         .input-group {
             gap: 1rem;
             label {
@@ -275,8 +271,8 @@ const Section = styled.section`
       }
       @media (${devices.laptopL}) {
         position: absolute;
-        top: 42%;
-        right: 16%;
+        top: 44%;
+        right: 20%;
         .input-group {
             gap: 1rem;
             label {
@@ -296,22 +292,22 @@ const Section = styled.section`
           }
       }
       @media (${devices.desktop}) {
-        top: 42%;
-        right: 16%;
+        top: 45%;
+        right: 19%;
         .input-group {
             gap: 1rem;
             label {
-              font-size: 2.3rem;
+              font-size: 2.2rem;
             }
             input {
-              font-size: 2.3rem;
+              font-size: 2.2rem;
             }
           }
           .date-container{
-            margin-top: 1.5rem;
+            margin-top: 2rem;
           }
           button {
-            margin-top: 3rem;
+            margin-top: 4rem;
             padding: 1.5rem 0 1.5rem 0;
             font-size: 2rem;
           }
