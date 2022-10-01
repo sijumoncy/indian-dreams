@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from "styled-components";
 import { siteContent, devices } from "../../Contents/SiteContents";
-import { ReactComponent as HomeIcon } from "../../Icons/home.svg";
-import { ReactComponent as ServiceIcon } from "../../Icons/service.svg";
-import { ReactComponent as LocationIcon } from "../../Icons/travelLocations.svg";
-import { ReactComponent as PackageIcon } from "../../Icons/travelPackage.svg";
-import { ReactComponent as AboutIcon } from "../../Icons/aboutInfo.svg";
+import { ReactComponent as HomeIcon } from "../../Assets/Icons/home.svg";
+import { ReactComponent as ServiceIcon } from "../../Assets/Icons/service.svg";
+import { ReactComponent as LocationIcon } from "../../Assets/Icons/travelLocations.svg";
+import { ReactComponent as PackageIcon } from "../../Assets/Icons/travelPackage.svg";
+import { ReactComponent as AboutIcon } from "../../Assets/Icons/aboutInfo.svg";
 import { useState } from 'react';
 
 function NavMenu() {
