@@ -3,6 +3,7 @@ import ScrollToTop from "../components/ScrollToTop";
 import Hero from "../components/Hero";
 import NavBar from "../components/Navbar/NavBar";
 import Services from "../components/Services";
+import Packages from "../components/Packages";
 
 function Home() {
   return (
@@ -11,6 +12,7 @@ function Home() {
       <NavBar />
       <Hero />
       <Services />
+      <Packages />
     </>
   );
 }
