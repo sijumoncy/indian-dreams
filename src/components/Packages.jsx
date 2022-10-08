@@ -30,7 +30,7 @@ function Packages() {
         <div className='tab-content'>
           {siteContent.topPackages[activeTab].map((pack) => (
             <div key={pack.id} className='content-container'>
-              <div>
+              <div className='img-wraper'>
                 <img src={pack.url} alt="No Prievew" />
               </div>
 
@@ -39,7 +39,7 @@ function Packages() {
 
                 <div className='locations'>
                   {pack.locations.map((location, index) => (
-                    <span key={pack.id + index}>{location}</span>
+                    <span className='location-item' key={pack.id + index}>{location}</span>
                   ))}
                 </div>
 
@@ -50,7 +50,7 @@ function Packages() {
                     <img src={CarIcon} />
                     <img src={ManClimbIcon} />
                   </div>
-                  <div className="price">{pack.price}</div>
+                  <div className="price">&#8377;{pack.price}</div>
                 </div>
 
                 <div className="duration">{pack.time}</div>
@@ -72,9 +72,21 @@ const Package = styled.section`
     justify-content: center;
     align-items: center;
     margin-top: 1rem;
+    @media (${devices.laptopL}){
+      margin-top: 2rem;
+    }
+    @media (${devices.desktop}){
+      margin-top: 3rem;
+    }
     .container {
         h5{
-            text-align: center;
+          text-align: center;
+          @media (${devices.laptopL}){
+            font-size: large;
+          } 
+          @media (${devices.desktop}){
+            font-size: xx-large;
+          } 
         }
         .tab-seletion{
             margin-top:.8rem ;
@@ -97,17 +109,39 @@ const Package = styled.section`
                     background-color: #801080;
                 }
             }
+            @media (${devices.laptopL}){
+              margin-top: 1rem;              
+              font-size: large;
+              font-weight: 500;
+            }
+            @media (${devices.desktop}){
+              margin-top: 1.2rem;
+              font-size: x-large;
+              font-weight: 600;
+            }
         }
         .tab-content{
           margin-top: 1rem;
           display: grid;
           gap: 1rem;
+          @media (${devices.tabletM}){
+            grid-template-columns : repeat(2, 1fr) ;
+            gap: 1rem 0;
+            margin: 1rem 1rem 0 1rem;
+          }
+          @media (${devices.tabletL}){
+            grid-template-columns : repeat(3, 1fr) ;
+            margin-top: 1.5rem;
+          }
+          @media (${devices.desktop}){
+            margin-top: 2.2rem;
+          }
           .content-container{
             background-color: #cac6c6b2;
             padding: 1rem;
             border-radius: .5rem;
-            margin: 0 1rem 0 1rem ;
-            img{
+            margin: 0rem .5rem 0 .5rem ;
+            img{              
               width: 100%;
               height: 100%;
               border-radius: .5rem;
@@ -155,6 +189,92 @@ const Package = styled.section`
               }
 
             }
+            @media (${devices.tabletM}){
+              .img-wraper{
+                width: 100%;
+                height: calc(9rem + 10vw);
+                margin-bottom: .8rem;
+                img{}
+              }
+              .destination{
+                .details{
+                  margin-top: .8rem;
+                  .icons{
+                    img {
+                    width: 6%;
+                    height: 6%;
+                  }
+                  }
+                }
+              }
+            }
+            @media (${devices.tabletL}){
+              .img-wraper{
+                width: 100%;
+                height: calc(6rem + 10vw);
+                margin-bottom: .8rem;
+              }
+            }
+            @media (${devices.laptopL}){
+              .destination{
+                .locations{
+                  margin-top: .3rem;
+                  span{
+                    display: inline-block;
+                    font-size: .8rem;
+                    padding: .4rem;
+                    margin-top: .4rem;
+                  }
+                }
+                .details{
+                  margin-top: 1rem;                
+                  .price{
+                    font-size: medium;
+                  }
+                }
+                .duration{
+                  font-size: medium;
+                }
+              }
+            }
+            @media (${devices.desktop}){
+              padding: 2rem;
+              border-radius: 1rem;
+              .img-wraper{
+                width: 100%;
+                height: calc(11rem + 10vw);
+                margin-bottom: 1rem;
+                img{
+                  border-radius: 1rem;
+                }
+              }
+              .destination{
+                .locations{
+                  span{
+                    display: inline-block;
+                    font-size: 1.1rem;
+                    padding: .5rem;
+                    margin-top: .8rem;
+                  }
+                }
+                .details{
+                  margin-top: 1.5rem;
+                  .icons {
+                  img {
+                    width: 7%;
+                    height: 7%;
+                  }
+                }
+                  .price{
+                    font-size: x-large;
+                  }
+                }
+                .duration{
+                  font-size: x-large;
+                }
+              }
+            }
+            
           }
         }
     }
