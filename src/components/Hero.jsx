@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import HeroBg from "../Assets/home-bg-1.jpg";
+import HeroVid from "../Assets/video/video-bg-1.mp4"
 import { siteContent, devices } from "../Contents/SiteContents";
 
 function Hero() {
@@ -8,7 +8,8 @@ function Hero() {
     <>
       <Section id="hero">
         <div className="background">
-          <img src={HeroBg} alt="" />
+          {/* <img src={HeroBg} alt="" /> */}
+          <video src={HeroVid} autoPlay muted loop />
         </div>
         {/* <div className="shade"></div> */}
         <div className="content">
@@ -50,9 +51,10 @@ const Section = styled.section`
   width: 100%;
   height: 100%;
   .background {
-    img {
+    video {
       width: 100%;
       height: 100%;
+      object-fit: cover;
     }
   }
   .content {
