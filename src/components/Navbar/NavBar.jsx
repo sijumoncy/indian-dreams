@@ -43,6 +43,7 @@ const Nav = styled.nav`
   padding: 0.5rem;
   justify-content: space-between;
   color: #fff;
+  z-index: 10;
   .logo {
     display: flex;
     align-items: flex-end;
