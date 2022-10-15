@@ -4,6 +4,7 @@ import Hero from "../components/Hero";
 import NavBar from "../components/Navbar/NavBar";
 import Services from "../components/Services";
 import Packages from "../components/Packages";
+import Testimonial from "../components/Testimonial";
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
       <Hero />
       <Services />
       <Packages />
+      <Testimonial />
     </>
   );
 }

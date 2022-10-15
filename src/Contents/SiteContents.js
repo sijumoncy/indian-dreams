@@ -367,6 +367,51 @@ export const siteContent = {
       },
     ],
   },
+
+  testimonials: [
+    {
+      name: "John Doe",
+      profile: require("../Assets/profile/male1.jpg"),
+      place: "Mumbai",
+      comment:
+        "Now for the trip: …drum roll please.  Of the various trips we have done with you this was definitely the best one. Of all the travel we have done Africa was our favorite, but this was a close second.",
+    },
+    {
+      name: "Joseph Kris",
+      place: "US",
+      profile: require("../Assets/profile/male2.jpg"),
+      comment:
+        "Let me start by saying this tour was a great experience for myself and my wife. I had been in India some 40 years ago and was very surprised and delighted to see how much had changed",
+    },
+    {
+      name: "Hentry Rose",
+      place: "England",
+      profile: require("../Assets/profile/female1.jpg"),
+      comment:
+        "What I loved most about India was both cultural and spiritual. It truly is a country with a mystical soul as we met friendly people at all walks of life and enjoyed the amazing history - through the archaeology of the",
+    },
+    {
+      name: "CAROLYN",
+      place: "Dubai",
+      profile: require("../Assets/profile/female2.jpg"),
+      comment:
+        "I just wanted to check in with you and let you know how amazing your local tour group Indian-Dreams was. They were so reliable and thorough. ",
+    },
+    {
+      name: "DEBBIE",
+      place: "Austria",
+      profile: require("../Assets/profile/male3.jpg"),
+      comment:
+        "Everything worked great: guides, drivers, agency people helping us at airports, ... all with a smile on their faces and great disposition",
+    },
+    {
+      name: "Jyothi",
+      place: "Delhi",
+      profile: require("../Assets/profile/female3.jpg"),
+      comment:
+        "I had been in India some 40 years ago and was very surprised and delighted to see how much had changed",
+    },
+  ],
 };
 
 export const devices = {
