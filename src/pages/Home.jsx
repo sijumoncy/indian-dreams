@@ -5,6 +5,7 @@ import NavBar from "../components/Navbar/NavBar";
 import Services from "../components/Services";
 import Packages from "../components/Packages";
 import Testimonial from "../components/Testimonial";
+import Gallery from "../components/gallery";
 
 function Home() {
   return (
@@ -15,6 +16,7 @@ function Home() {
       <Services />
       <Packages />
       <Testimonial />
+      <Gallery />
     </>
   );
 }

@@ -412,6 +412,17 @@ export const siteContent = {
         "I had been in India some 40 years ago and was very surprised and delighted to see how much had changed",
     },
   ],
+  gallery: [
+    { image: require("../Assets/locations/location1.jpeg") },
+    { image: require("../Assets/locations/location2.jpeg") },
+    { image: require("../Assets/locations/location3.jpeg") },
+    { image: require("../Assets/locations/location4.jpeg") },
+    { image: require("../Assets/locations/location5.jpeg") },
+    { image: require("../Assets/locations/location6.jpeg") },
+    { image: require("../Assets/locations/location7.jpeg") },
+    { image: require("../Assets/locations/location8.jpeg") },
+    { image: require("../Assets/locations/location9.jpeg") },
+  ],
 };
 
 export const devices = {
