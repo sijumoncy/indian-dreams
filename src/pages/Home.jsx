@@ -6,6 +6,7 @@ import Services from "../components/Services";
 import Packages from "../components/Packages";
 import Testimonial from "../components/Testimonial";
 import Gallery from "../components/gallery";
+import Footer from "../components/Footer";
 
 function Home() {
   return (
@@ -17,6 +18,7 @@ function Home() {
       <Packages />
       <Testimonial />
       <Gallery />
+      <Footer />
     </>
   );
 }

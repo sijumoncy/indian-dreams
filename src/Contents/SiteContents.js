@@ -423,6 +423,7 @@ export const siteContent = {
     { image: require("../Assets/locations/location8.jpeg") },
     { image: require("../Assets/locations/location9.jpeg") },
   ],
+  copyright: "Copyright @2022 rivissolutions",
 };
 
 export const devices = {
