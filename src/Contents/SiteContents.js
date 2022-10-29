@@ -1,11 +1,12 @@
 export const siteContent = {
   appName: "Indian Dreams",
   menuItems: [
-    { name: "Home", iconName: "Home" },
-    { name: "Services", iconName: "Service" },
-    { name: "Packages", iconName: "TravelPackage" },
-    { name: "Locations", iconName: "TravelLocations" },
-    { name: "About", iconName: "AboutInfo" },
+    { name: "Home", iconName: "Home", sectionHref: "#" },
+    { name: "Services", iconName: "Service", sectionHref: "#services" },
+    { name: "Packages", iconName: "TravelPackage", sectionHref: "#packages" },
+    { name: "Testimony", iconName: "Testimony", sectionHref: "#testimonial" },
+    { name: "Locations", iconName: "TravelLocations", sectionHref: "#gallery" },
+    // { name: "About", iconName: "AboutInfo" },
   ],
   heroTitle: "Travel..  Experience..  Live",
   heroParagraph:

@@ -5,7 +5,7 @@ import { siteContent, devices } from "../Contents/SiteContents";
 
 function Gallery() {
     return (
-        <GallerySection>
+        <GallerySection id='gallery'>
             <h4>Trending Locations</h4>
             <div className='gallery-container'>
                 {siteContent.gallery.map((item, index) => (

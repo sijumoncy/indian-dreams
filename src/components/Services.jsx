@@ -11,7 +11,7 @@ const Icons = [RouteIcon, SafeIcon, DiscountIcon, PaymentIcon]
 
 function Services() {
     return (
-        <ServiceSection>
+        <ServiceSection id='services'>
             {siteContent.services.map((item, index) => (
                 <ServiceCard key={index} icon={Icons[index]} head={item.title} content={item.desc} />
             ))}

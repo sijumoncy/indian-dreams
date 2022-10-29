@@ -43,7 +43,7 @@ function testimonial() {
 
 
   return (
-    <Section>
+    <Section id='testimonial'>
       <div className='content'>
         <h5>Testimonial</h5>
         <h4>Stories From Our Clients</h4>

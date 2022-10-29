@@ -5,65 +5,67 @@ import { ReactComponent as HomeIcon } from "../../Assets/Icons/home.svg";
 import { ReactComponent as ServiceIcon } from "../../Assets/Icons/service.svg";
 import { ReactComponent as LocationIcon } from "../../Assets/Icons/travelLocations.svg";
 import { ReactComponent as PackageIcon } from "../../Assets/Icons/travelPackage.svg";
-import { ReactComponent as AboutIcon } from "../../Assets/Icons/aboutInfo.svg";
+import { ReactComponent as Testimony } from "../../Assets/Icons/testimony.svg";
 import { useState } from 'react';
 
 function NavMenu() {
 
-    const [menuActive, setMenuActive] = useState('Home');
+  const [menuActive, setMenuActive] = useState('Home');
 
-    return (
-        <NavList>
-            <ul>
-                {siteContent.menuItems.map((item, index) => (
-                    <li key={index}>
-                        {item.iconName === 'Home'
-                            ? <HomeIcon
-                                fill={menuActive === item.iconName ? 'green' : ''}
-                                className="menu-icon"
-                                onClick={() => setMenuActive(item.iconName)}
-                                height={20} width={20} />
+  return (
+    <NavList>
+      <ul>
+        {siteContent.menuItems.map((item, index) => (
+          <li key={index}>
+            {item.iconName === 'Home'
+              ? <a href={item.sectionHref}><HomeIcon
+                fill={menuActive === item.iconName ? 'green' : ''}
+                className="menu-icon"
+                onClick={() => setMenuActive(item.iconName)}
+                height={20} width={20} /></a>
 
-                            : item.iconName === 'Service'
-                                ? <ServiceIcon
-                                    fill={menuActive === item.iconName ? 'green' : ''}
-                                    className="menu-icon"
-                                    onClick={() => setMenuActive(item.iconName)}
-                                    height={20} width={20} />
+              : item.iconName === 'Service'
+                ? <a href={item.sectionHref}><ServiceIcon
+                  fill={menuActive === item.iconName ? 'green' : ''}
+                  className="menu-icon"
+                  onClick={() => setMenuActive(item.iconName)}
+                  height={20} width={20} /></a>
 
-                                : item.iconName === 'TravelPackage'
-                                    ? <PackageIcon
-                                        fill={menuActive === item.iconName ? 'green' : ''}
-                                        className="menu-icon"
-                                        onClick={() => setMenuActive(item.iconName)}
-                                        height={20} width={20} />
+                : item.iconName === 'TravelPackage'
+                  ? <a href={item.sectionHref}><PackageIcon
+                    fill={menuActive === item.iconName ? 'green' : ''}
+                    className="menu-icon"
+                    onClick={() => setMenuActive(item.iconName)}
+                    height={20} width={20} /></a>
 
-                                    : item.iconName === 'TravelLocations'
-                                        ? <LocationIcon
-                                            fill={menuActive === item.iconName ? 'green' : ''}
-                                            className="menu-icon"
-                                            onClick={() => setMenuActive(item.iconName)}
-                                            height={20} width={20} />
+                  : item.iconName === 'Testimony'
+                    ? <a href={item.sectionHref}><Testimony
+                      fill={menuActive === item.iconName ? 'green' : ''}
+                      className="menu-icon"
+                      onClick={() => setMenuActive(item.iconName)}
+                      height={20} width={20} /></a>
 
-                                        : item.iconName === 'AboutInfo'
-                                            ? <AboutIcon
-                                                fill={menuActive === item.iconName ? 'green' : ''}
-                                                className="menu-icon"
-                                                onClick={() => setMenuActive(item.iconName)}
-                                                height={20} width={20} />
-                                            : ''
-                        }
-                        <span
-                            className={menuActive === item.iconName ? 'active-menu-text' : ''}
-                            onClick={() => setMenuActive(item.iconName)}
-                        >
-                            {item.name}
-                        </span>
-                    </li>
-                ))}
-            </ul>
-        </NavList >
-    )
+                    : item.iconName === 'TravelLocations'
+                      ? <a href={item.sectionHref}><LocationIcon
+                        fill={menuActive === item.iconName ? 'green' : ''}
+                        className="menu-icon"
+                        onClick={() => setMenuActive(item.iconName)}
+                        height={20} width={20} /></a>
+                      : ''
+            }
+            <a href={item.sectionHref}>
+              <span
+                className={menuActive === item.iconName ? 'active-menu-text' : ''}
+                onClick={() => setMenuActive(item.iconName)}
+              >
+                {item.name}
+              </span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </NavList >
+  )
 }
 
 const NavList = styled.div`
@@ -91,7 +93,8 @@ const NavList = styled.div`
             flex-direction: column;
             align-items: center;
             list-style: none;
-
+            a{
+              text-decoration: none;
             span {
                 display: none;
                 font-size: x-small;
@@ -102,6 +105,7 @@ const NavList = styled.div`
                     display: block;
                 }
             }
+          }
         }
 
         @media (${devices.tabletM}){
@@ -113,9 +117,11 @@ const NavList = styled.div`
         @media (${devices.tablet}){
             margin-top: 1.2rem;
             li {
-                .menu-icon{
+                a{
+                  .menu-icon{
                     display: none;
-                }
+                  }
+                
                 .active-menu-text{
                     color: #fff;
                     font-weight: 600;
@@ -128,22 +134,29 @@ const NavList = styled.div`
                         color: #fff;
                     }
                 }
+              }
             }
         }
 
         @media (${devices.laptopL}){
             margin-top: 2.5rem;
             li {
+              a {
+
                 span {
-                    font-size: large;
+                  font-size: large;
                 }
+              }
             }
         }
         @media (${devices.desktop}){
             li {
+              a{
+
                 span {
-                    font-size: 1.8rem;
+                  font-size: 1.8rem;
                 }
+              }
             }
         }
 

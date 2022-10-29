@@ -12,7 +12,7 @@ function Packages() {
   const [activeTab, setActiveTab] = useState('holiday')
 
   return (
-    <Package>
+    <Package id='packages'>
       <div className='container'>
         <h5>Top Packages</h5>
         <div className='tab-seletion'>
