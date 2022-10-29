@@ -45,10 +45,10 @@ function Packages() {
 
                 <div className="details">
                   <div className="icons">
-                    <img src={PlaneIcon} />
-                    <img src={HotelIcon} />
-                    <img src={CarIcon} />
-                    <img src={ManClimbIcon} />
+                    <img src={PlaneIcon} alt="No Prievew" />
+                    <img src={HotelIcon} alt="No Prievew" />
+                    <img src={CarIcon} alt="No Prievew" />
+                    <img src={ManClimbIcon} alt="No Prievew" />
                   </div>
                   <div className="price">&#8377;{pack.price}</div>
                 </div>

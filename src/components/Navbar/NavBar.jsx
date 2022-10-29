@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import logo from "../../Assets/logo.png";
-import { siteContent, devices } from "../../Contents/SiteContents";
-import HamBurg from "./HamBurg";
+import { devices } from "../../Contents/SiteContents";
+// import HamBurg from "./HamBurg";
 import NavMenu from "./NavMenu";
 
 function NavBar() {

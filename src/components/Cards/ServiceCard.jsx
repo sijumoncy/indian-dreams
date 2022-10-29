@@ -7,7 +7,7 @@ function ServiceCard({ icon, head, content }) {
         <Card>
             <div className='box'>
                 <div className='icon'>
-                    <img src={icon} />
+                    <img src={icon} alt="No preview" />
                 </div>
                 <span>{head}</span>
                 <p>{content}</p>
@@ -23,7 +23,7 @@ const Card = styled.section`
     .box{
         display: flex;
         flex-flow: column nowrap;
-        background-color: #e1e7e4a7;
+        /* background-color: #e1e7e4a7; */
         padding: 1rem;
         border-radius: .5rem;
         .icon {

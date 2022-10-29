@@ -9,7 +9,7 @@ function Gallery() {
             <h4>Trending Locations</h4>
             <div className='gallery-container'>
                 {siteContent.gallery.map((item, index) => (
-                    <img src={item.image} alt='Not found Image' />
+                    <img key={index} src={item.image} alt='No Preview' />
                 ))}
             </div>
         </GallerySection>
@@ -30,7 +30,7 @@ const GallerySection = styled.section`
         }
     }
     .gallery-container{
-        background-color: var(--gray-light);
+        background-color: #cac6c6b2;
         padding: 1rem;
         border-radius: .5rem;
         columns: 3 250px;
