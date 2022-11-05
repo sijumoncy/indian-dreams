@@ -34,6 +34,12 @@ const CopyRightSection = styled.section`
             }
         }
     }
+    @media (${devices.tablet}){
+        height: 0;
+        div {
+         height: 10vh;
+        }
+    }
 `;
 
 export default CopyRight;

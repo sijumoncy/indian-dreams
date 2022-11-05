@@ -13,7 +13,7 @@ function Footer() {
         <div className="logo">
           <img src={logo} alt='' />
           <div className="app-name">
-            Indian Dreams
+            <span className="name-part-1">Indian</span><span className="name-part-2"> Dreams</span>
           </div>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
         </div>
@@ -43,6 +43,11 @@ const FooterSection = styled.footer`
         justify-content: center;
         align-items: center;
         color: #b9b1b1;
+        @media (${devices.tablet}){
+          flex-flow: row nowrap; 
+          justify-content: space-around;
+          align-items: center;
+        }
         .logo{
           img {
             width: 35px;
@@ -52,14 +57,27 @@ const FooterSection = styled.footer`
             font-size: small;
             font-weight: 500;
             padding-bottom: .2rem;
+            display: flex;
+            flex-flow: row;
+            align-items: flex-end;
             &:hover {
               color: white;
+            }
+            .name-part-1{
+              margin-left: .3rem;
+              color: green;
+            }
+            .name-part-2{
+              color: #ff4a4a;
             }
           }
           p {
             text-align: center;
             width: 80%;
             font-size: .5rem;
+          }
+          @media (${devices.tablet}){
+          flex-flow: column nowrap; 
           }
         }
         .mail {
@@ -92,6 +110,9 @@ const FooterSection = styled.footer`
             }
           }
         }
+    }
+    @media (${devices.tablet}){
+      height: 25vh;
     }
 `;
 
