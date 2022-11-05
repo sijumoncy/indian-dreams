@@ -123,21 +123,34 @@ const NavList = styled.div`
                   }
                 
                 .active-menu-text{
-                    color: #fff;
-                    font-weight: 600;
+                    color: green;
+                    font-weight: 700;
                 }
                 span {
                     font-size: smaller;
-                    font-weight: 400;
-                    color: #cac4c4;
+                    font-weight: 300;
+                    color: #fff;
                     &:hover {
-                        color: #fff;
+                        /* color: #fff; */
+                        font-weight: 400;
                     }
                 }
               }
             }
         }
-
+        @media (${devices.laptop}){
+          li {
+                span {
+                    font-size: smaller;
+                    font-weight: 300;
+                    color: #fff;
+                    &:hover {
+                        color: #fff;
+                        font-weight: 400;
+                    }
+                }
+              }
+        }
         @media (${devices.laptopL}){
             margin-top: 2.5rem;
             li {

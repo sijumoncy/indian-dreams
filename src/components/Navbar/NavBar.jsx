@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import logo from "../../Assets/logo.png";
 import { devices } from "../../Contents/SiteContents";
@@ -7,24 +7,25 @@ import NavMenu from "./NavMenu";
 
 function NavBar() {
 
+  const [activeNav, setActiveNav] = useState(false)
 
   // event listner for scroll y
-  // const changeNavBackground = () => {
-  //   if (window.scrollY >= 30) {
-  //     setActive(true);
-  //   } else {
-  //     setActive(false);
-  //   }
-  // };
-  // window.addEventListener("scroll", changeNavBackground);
+  const changeNavBackground = () => {
+    if (window.scrollY >= 30) {
+      setActiveNav(true);
+    } else {
+      setActiveNav(false);
+    }
+  };
+  window.addEventListener("scroll", changeNavBackground);
 
   return (
     <>
-      <Nav >
+      <Nav activeNav={activeNav}>
         <div className="logo">
           <img src={logo} alt='' />
           <div className="app-name">
-            Indian Dreams
+            <span className="name-part-1">Indian</span><span className="name-part-2"> Dreams</span>
           </div>
         </div>
         <NavMenu />
@@ -36,13 +37,15 @@ function NavBar() {
 // default is mobileS
 const Nav = styled.nav`
   width: 100%;
-  position: sticky;
-  top: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .8));;
+  position: ${props => props.activeNav ? 'sticky' : 'fixed'};
+  top: ${props => props.activeNav & 0};
+  /* background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .8)); */
+  background: ${props => props.activeNav ? 'linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .8))' : ''};
   display: flex;
   padding: 0.5rem;
   justify-content: space-between;
-  color: #fff;
+  /* color: #fff; */
+  color:${props => props.activeNav ? '#fff' : '#ff4a4a'};
   z-index: 10;
   .logo {
     display: flex;
@@ -55,6 +58,12 @@ const Nav = styled.nav`
     .app-name {
       font-size: small;
       font-weight: 500;
+      .name-part-1{
+          color: green;
+      }
+      .name-part-2{
+        color: #ff4a4a;
+      }
     }
   }
   @media (${devices.laptopL}){
